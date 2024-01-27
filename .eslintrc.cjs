@@ -1,8 +1,8 @@
-const { default: eslintPluginPrettier } = require("eslint-plugin-prettier");
+const { default: eslintPluginPrettier } = require('eslint-plugin-prettier');
 
 module.exports = {
-  root: true,
-  env: { browser: true, es2020: true },
+  root: false,
+  env: { browser: false, es2020: false },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -10,21 +10,20 @@ module.exports = {
     'plugin:react/recommended',
     'prettier',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs','vite.config.ts'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.ts'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh','react','@typescript-eslint','prettier'],
+  plugins: ['react-refresh', 'react', '@typescript-eslint', 'prettier'],
   rules: {
-    'react/react-in-jsx-scope':'off',
+    'react/react-in-jsx-scope': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
     ],
-    'prettier/prettier':'error'
+    'prettier/prettier': 'error',
   },
-  settings:{
-    react:{
-      version: 'detect'
-    }
-
-  }
-}
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+};
