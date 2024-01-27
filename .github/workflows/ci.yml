@@ -21,6 +21,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Build project
+      run: npm build
 
   deploy:
     runs-on: ubuntu-latest
